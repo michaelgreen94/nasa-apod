@@ -6,7 +6,7 @@ const apodUrl = 'https://api.nasa.gov/planetary/apod?'
 export default class NasaService {
 
   getApod(date, draw) {
-    fetch(apodUrl + '&date=' + date)
+    fetch(apodUrl + apiKey + '&date=' + date)
       .then(res => res.json())
       .then(data => {
         draw(new ApodData(data))

@@ -20,6 +20,7 @@ export default class NasaController {
     let date = ''
     if (event) {
       event.preventDefault();
+      console.log(event)
       date = event.target.date.value
     }
     nasaService.getApod(date, drawApod)
